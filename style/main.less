@@ -1,0 +1,140 @@
+/* LESS Document */
+
+
+/*@colors:#00c;
+@blue:@colors - #333;
+@back:#000;
+@color:#fff;
+
+.box { font-size:24px; color:@color;}
+.div1 { background:@colors;}
+.div2 { background:@blue;}*/
+
+/*.border { border-top:1px solid #00F;}
+.wH { width:300px; height:50px;}
+
+.div1 {.border; .wH; background:#CCC;}*/
+
+/*@colors:blue;
+
+.div1 { @colors:red; border:1px solid @colors;}
+.div2 { border:1px solid @colors;}*/
+
+/*@nice-blue: #5b83ad;
+@light-blue: "nice-blue";
+.div1 {
+	color: @@light-blue;
+}*/
+
+/*.box-shadow(@x:0,@y:0,@blur:0,@color:red){
+	-webkit-box-shadow:@arguments;
+	-moz-box-shadow:@arguments;
+	box-shadow:@arguments;
+}
+
+.border(@size:0,@style:solid,@color:red){
+	border:@arguments;
+}
+
+.border-radius (@size:0){
+	border-radius:@size;
+	-webkit-border-radius:@size;
+	-moz-border-radius:@size;
+}
+
+.width (@width:0){
+	width:@width;
+}
+
+.div1 { .box-shadow(2px,2px,5px,rgba(12,222,166,0.5)); .border(5px,solid,blue); .border-radius(5px); .width(400px);}
+.div2 { .box-shadow(5px,1px,10px,rgba(111,111,111,1)); .border(10px,solid,yellow); .border-radius(10px); .width(300px);}*/
+
+/*.box {
+	width:500px; height:500px; border:1px solid #09F;
+	.div1 {
+		width:100px; height:100px; background:orange;
+	}
+	.div2 { width:100px; height:50px; background:green;
+		a {
+			color:#fff; text-decoration:none;
+			&:hover { text-decoration:underline;}
+		}
+	}
+}*/
+
+/*@the-border: 1px;
+@base-color: #111;
+@red: #842210;
+.box {
+	color: @base-color *3;
+	border: 1px solid desaturate(@red,100%);
+	border-width: @the-border @the-border*2 @the-border*3 @the-border;				
+	border-color:desaturate(@red,100%) @red lighten(@red, 10%)	darken(@red, 30%);	
+}*/
+
+@import "type.less";
+
+/* 变量 */
+/*@link-color: #428bca;
+@link-color-hover: darken(@link-color, 10%);
+
+@base-color: green;
+@dark-color: darken(@base-color, 10%);
+@base-color: red;
+
+
+
+.my-other-mixin() {
+  background: orange;
+}
+*/
+
+/*.border-radius (@size:0) {
+	border-radius:@size;
+}
+
+.box-shadow (@x:0; @y:0; @blur:0; @color:red){
+	-webkit-box-shadow:@arguments;
+}
+
+.div1 { background:orange; width:100px; height:100px; .border-radius(10px); .box-shadow(2px; 2px; 2px; red);}
+
+.div2 { .box-shadow(2px; 2px; 2px; red);}*/
+/*.box(@color; @width; @height;) {
+	color: @color; 
+	width:@width; 
+	height:@height;
+}
+
+
+.div1 { .box(@color: red; @width: 100px; @height: 100px;);}*/
+
+/*.list (@width:0; @heigth:0; @line-height:0; @font-size:12px;){
+	width:@width; height:@height; line-height:@line-height; font-size:@font-size;
+}
+
+ul li { .list(@width:200px; @heigth:30px; @line-height:30px; @font-size:12px;)}
+*/
+/* 通用 */
+.noMP (@margin:0; @padding:0){
+	margin:@margin; padding:@padding;
+}
+
+
+/* list:一般用于列表类，如：新闻等 */
+.list (@font-size; @width; @height; @line-height;){
+	width: @width; height: @height; line-height: @line-height; font-size: @font-size;
+}
+/* 单项复合属性的名称命名规则：将CSS中的名字‘-’改为‘_’ */
+.border_bottom (@size:1px; @style:dashed; @color:#ccc){
+	border-bottom:@arguments;
+}
+
+
+body,ul,li { .noMP}
+
+
+.ul2 li { .list(@font-size:14px; @width:200px; @height:30px; @line-height:30px;); .border_bottom(@style:solid);}
+
+
+

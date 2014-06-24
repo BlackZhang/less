@@ -1,0 +1,13 @@
+/* LESS Document */
+.size { padding:10px;}
+
+.message (@color;){
+	&:extend (.size);
+	color:@color;
+	background:lighten(@color, 40%);
+	border:1px solid lighten(@color, 10%);
+}
+
+.warning { .message(orange);}
+.error { .message(red);}
+.right { .message(green);}
